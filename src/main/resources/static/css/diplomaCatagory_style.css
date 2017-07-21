@@ -1,0 +1,20 @@
+body{
+    margin-bottom: 90px;
+}
+.add_form{
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.diplomaCategory_table{
+    width: 80%;
+    margin: 0 auto;
+    text-align:  center;
+}
+.diplomaCategory_table th{
+    text-align: center;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}

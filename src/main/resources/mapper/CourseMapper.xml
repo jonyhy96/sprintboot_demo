@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wacai.springboot_demo.mapper.CourseMapper">
+    <resultMap id="CourseBaseMap" type="com.wacai.springboot_demo.model.Course">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="teacherId" column="teacher_id" />
+        <result property="num" column="num" />
+        <result property="state" column="state" />
+    </resultMap>
+
+    <resultMap id="CourseSelect" type="com.wacai.springboot_demo.model.CourseSelectInfo">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="num" column="num" />
+        <result property="numE" column="num_e" />
+        <association property="teacher" javaType="com.wacai.springboot_demo.model.Teacher">
+            <id property="id" column="teacher_id" />
+            <result property="name" column="teacher_name" />
+        </association>
+    </resultMap>
+
+    <insert id="save" parameterType="com.wacai.springboot_demo.model.Course">
+      INSERT INTO course(name,teacher_id,num)
+      VALUES (#{name},#{teacherId},#{num})
+    </insert>
+
+    <select id="getById" parameterType="int" resultMap="CourseBaseMap">
+        SELECT *
+        FROM course
+        WHERE id = #{id}
+    </select>
+
+    <select id="getCourseWithNumEById" parameterType="int" resultMap="CourseSelect">
+        SELECT
+        cou.id as id,
+        cou.name as name,
+        cou.num as num,
+        count(sc.id) as num_e,
+        tea.id as teacher_id,
+        tea.name as teacher_name
+        from course cou
+        left join student_course sc on cou.id = sc.course_id and sc.state = 1
+        left join teacher tea on cou.teacher_id = tea.id
+        WHERE cou.id = #{courseId}
+    </select>
+
+    <select id="findCourseWithTeacher" parameterType="int"
+        resultMap="CourseSelect">
+        SELECT
+        cou.id as id,
+        cou.name as name,
+        cou.num as num,
+        count(sc.id) as num_e,
+        tea.id as teacher_id,
+        tea.name as teacher_name
+        from course cou
+        left join student_course sc on cou.id = sc.course_id and sc.state = 1
+        left join teacher tea on cou.teacher_id = tea.id
+        <where>
+            <if test="_parameter != null">
+                cou.teacher_id = #{teacherId}
+            </if>
+            AND cou.state = 1
+        </where>
+        group by cou.id;
+    </select>
+
+    <update id="deleteById" parameterType="int">
+        UPDATE course
+        SET state = -1
+        WHERE id = #{id}
+    </update>
+
+</mapper>

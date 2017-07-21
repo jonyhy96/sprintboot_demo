@@ -1,0 +1,195 @@
+.label_form{
+    width: 10.5%;
+}
+.input_form{
+    width: 89.5%;
+}
+.print_table{
+    text-align: center;
+}
+.print_table th{
+    text-align: center;
+}
+.print_table .btn-inverse{
+    margin-left: 15px;
+}
+.pagination_div{
+    text-align: center;
+}
+.add{
+    float: right;
+    margin-top: 9px;
+    color: #1ABC9C;
+    cursor: pointer;
+}
+.add_form{
+    margin: 20px auto;
+}
+
+
+.show_form{
+    animation-name: showform;
+    -webkit-animation-name: showform;
+    -moz-animation-name: showform;
+    -o-animation-name: showform;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes showform {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.hide_form{
+    animation-name: hideform;
+    -webkit-animation-name: hideform;
+    -moz-animation-name: hideform;
+    -o-animation-name: hideform;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes hideform {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.close_button{
+    animation-name: closebutton;
+    -webkit-animation-name: closebutton;
+    -moz-animation-name: closebutton;
+    -o-animation-name: closebutton;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes closebutton {
+    from{
+
+    }
+    to{
+
+        transform: rotate(-405deg) scale(0.5);
+
+    }
+}
+.add_button{
+    animation-name: addbutton;
+    -webkit-animation-name: addbutton;
+    -moz-animation-name: addbutton;
+    -o-animation-name: addbutton;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes addbutton {
+    from{
+
+    }
+    to{
+
+        transform: rotate(360deg) scale(1);
+
+    }
+}
+.move_down{
+    animation-name: md;
+    -webkit-animation-name: md;
+    -moz-animation-name: md;
+    -o-animation-name: md;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes md {
+    from{
+
+    }
+    to{
+        transform: translateY(4px);
+    }
+}
+.move_up{
+    animation-name: mu;
+    -webkit-animation-name: mu;
+    -moz-animation-name: mu;
+    -o-animation-name: mu;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes mu {
+    from {
+
+    }
+    to {
+        transform: translateY(-4px);
+    }
+}
+
+/*addPrint*/
+.addPrint_footer{
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,20 @@
+body{
+    margin-bottom: 90px;
+}
+.add_form{
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.graduateCategory_table{
+    width: 80%;
+    margin: 0 auto;
+    text-align:  center;
+}
+.graduateCategory_table th{
+    text-align: center;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}

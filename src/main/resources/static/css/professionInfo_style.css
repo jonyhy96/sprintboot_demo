@@ -1,0 +1,30 @@
+body{
+    margin-bottom: 90px;
+}
+.college_list li{
+    list-style: none;
+}
+.college_list li a{
+    padding: 10px;
+}
+.college_list li .selected_item{
+    padding-left: 20px;
+    color: #1ABC9C;
+}
+.college_list li a span{
+    margin: 0 5px;
+}
+.add_form{
+    overflow: hidden;
+    margin: 20px auto;
+}
+.profession_table{
+    text-align:  center;
+}
+.profession_table th{
+    text-align: center;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,8 @@
+.graduation_table,.graduation_table th,.graduation_table td{
+    text-align: center;
+    display:table-cell;
+    vertical-align: middle !important;
+}
+.footer{
+    margin-top: 20px;
+}

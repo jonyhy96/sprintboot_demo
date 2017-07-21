@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wacai.springboot_demo.mapper.StudentMapper">
+
+    <resultMap id="StudentBaseMap" type="com.wacai.springboot_demo.model.Student">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="password" column="password" />
+        <result property="state" column="state" />
+    </resultMap>
+
+    <insert id="save" parameterType="com.wacai.springboot_demo.model.Student">
+      INSERT INTO student(name,password)
+      VALUES (#{name},#{password})
+    </insert>
+
+    <select id="login" parameterType="com.wacai.springboot_demo.model.Student" resultMap="StudentBaseMap">
+        SELECT *
+        FROM student
+        WHERE name = #{name} and password = #{password}
+    </select>
+</mapper>

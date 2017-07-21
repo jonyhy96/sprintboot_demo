@@ -1,0 +1,18 @@
+.list_table{
+    text-align: center;
+}
+.list_table th{
+    text-align: center;
+}
+
+.bgimg{
+    background-image: url("../images/xw.jpeg");
+    background-size: cover;
+    height:19cm;width:29cm;
+    /*overflow-x: scroll;*/
+    /*overflow-y: scroll;*/
+}
+.cer_div{
+	/*border:1px solid #999;*/
+	text-align:center;
+}

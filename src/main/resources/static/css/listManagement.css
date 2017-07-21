@@ -1,0 +1,20 @@
+.content_title{
+    margin-bottom: 20px;
+}
+.left_content{
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+
+}
+.table{
+    text-align: center;
+}
+.table th{
+    text-align: center;
+}
+.all_btn{
+    margin-right: 10px;
+}
+.footer{
+    margin-top: 20px;
+}

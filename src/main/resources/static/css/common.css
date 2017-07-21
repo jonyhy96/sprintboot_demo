@@ -1,0 +1,29 @@
+
+.logo{
+    float: left;
+}
+.logo small{
+    font-weight: bold;
+}
+.user{
+    float: right;
+    line-height: 67px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.user .dropdown-menu{
+    top:65%;
+}
+.navbar{
+    margin-bottom: 0;
+}
+
+.footer{
+    width: 100%;
+}
+.footer_title{
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 0;
+}

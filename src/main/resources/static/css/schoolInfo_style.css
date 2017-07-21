@@ -1,0 +1,13 @@
+.school_form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.extra_group{
+    display: none;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,25 @@
+body{
+    margin-bottom: 80px;
+}
+.add_form{
+    width: 75%;
+    margin: 20px 0;
+    display: inline-block;
+}
+.preserve_btn{
+    width: 20%;
+    display: inline-block;
+}
+.graduate_table{
+    text-align: center;
+}
+.graduate_table th{
+    text-align: center;
+}
+.one_btn{
+    width: 100%;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}

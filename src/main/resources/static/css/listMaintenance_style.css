@@ -1,0 +1,259 @@
+body{
+    margin-bottom: 90px;
+}
+.search_form{
+    padding: 10px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+}
+.add_container{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.table_container{
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 20px auto;
+}
+
+.graduate_table{
+    text-align: center;
+    min-width: 980px;
+
+}
+.graduate_table th{
+    text-align: center;
+}
+.form_select{
+    background-color: #e3e3e3;
+    border: 1px solid #dadada;
+    padding: 10px;
+    width: 100px;
+    opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    top:0;
+    left:0;
+}
+.form_select ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.form_select ul li{
+    list-style: none;
+    width: 80px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.form_select ul li:hover{
+    background-color: #dadada;
+}
+.selected_item{
+    background-color: #cccccc;
+}
+.btn_container{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.search{
+    float: right;
+    margin-top: 9px;
+    color: #1ABC9C;
+    cursor: pointer;
+}
+.search_form{
+    display: none;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}
+
+.show_form{
+    animation-name: showform;
+    -webkit-animation-name: showform;
+    -moz-animation-name: showform;
+    -o-animation-name: showform;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes showform {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.hide_form{
+    animation-name: hideform;
+    -webkit-animation-name: hideform;
+    -moz-animation-name: hideform;
+    -o-animation-name: hideform;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes hideform {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.close_button{
+    animation-name: closebutton;
+    -webkit-animation-name: closebutton;
+    -moz-animation-name: closebutton;
+    -o-animation-name: closebutton;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes closebutton {
+    from{
+
+    }
+    to{
+
+        transform: rotate(-405deg) scale(0.5);
+
+    }
+}
+.search_button{
+    animation-name: addbutton;
+    -webkit-animation-name: addbutton;
+    -moz-animation-name: addbutton;
+    -o-animation-name: addbutton;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes addbutton {
+    from{
+
+    }
+    to{
+
+        transform: rotate(360deg) scale(1);
+
+    }
+}
+.move_down{
+    animation-name: md;
+    -webkit-animation-name: md;
+    -moz-animation-name: md;
+    -o-animation-name: md;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes md {
+    from{
+
+    }
+    to{
+        transform: translateY(4px);
+    }
+}
+.move_up{
+    animation-name: mu;
+    -webkit-animation-name: mu;
+    -moz-animation-name: mu;
+    -o-animation-name: mu;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
+@keyframes mu {
+    from{
+
+    }
+    to{
+        transform: translateY(-4px);
+    }
+}
+
+.detail{
+    color: #27AE60;
+}
+.detail:hover{
+    color: #2ECC71;
+}
+.delete{
+    color: #BDC3C7;
+}
+.delete:hover{
+    color: #ECF0F1;
+}
+
+/*listMaintenanceTranslate start*/
+.change_btn{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.change_form,.add_form{
+    width: 80%;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,50 @@
+.table_container{
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 20px auto;
+}
+
+.graduate_table{
+    text-align: center;
+    min-width: 980px;
+
+}
+.graduate_table th{
+    text-align: center;
+}
+.form_select{
+    background-color: #e3e3e3;
+    border: 1px solid #dadada;
+    padding: 10px;
+    width: 100px;
+    opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    top:0;
+    left:0;
+}
+.form_select ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.form_select ul li{
+    list-style: none;
+    width: 80px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.form_select ul li:hover{
+    background-color: #dadada;
+}
+.selected_item{
+    background-color: #cccccc;
+}
+.btn_container{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.change_btn,.save_btn{
+    margin-right: 10px;
+}

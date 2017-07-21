@@ -1,0 +1,21 @@
+body{
+    margin-bottom: 80px;
+}
+.select_form{
+    width: 50%;
+    float: right;
+}
+.record_table{
+    text-align: center;
+}
+.record_table th{
+    text-align: center;
+}
+.pagination_div{
+    text-align: center;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+}

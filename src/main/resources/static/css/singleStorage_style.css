@@ -1,0 +1,21 @@
+body{
+    margin-bottom: 80px;
+}
+.add_form .form-group{
+    margin-bottom: 10px;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+}
+.import_list{
+    overflow: hidden;
+}
+.import_list li{
+    list-style: none;
+    float: left;
+    padding: 10px 25px;
+}
+.import_list li input,.selectAll{
+    margin-right: 5px !important;
+}

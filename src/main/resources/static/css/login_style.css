@@ -1,0 +1,47 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.login{
+    background: none;
+    min-height: 100%;
+    _height: 100%;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #1abc9c;
+}
+.title{
+    font-family: "Microsoft YaHei UI Light";
+    margin: 0;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+.login-screen{
+    padding: 45px 199px 33px 306px;
+}
+.login-icon{
+    top: 172px;
+}
+.login-form{
+    width: 750px;
+}
+.login-form .form-group{
+    width: 700px;
+}
+.login-form .btn_login{
+    display: inline-block;
+    width: 325px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer_title{
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 0;
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wacai.springboot_demo.mapper.StudentCourseMapper">
+    <resultMap id="StudentCourseBaseMap" type="com.wacai.springboot_demo.model.StudentCourse">
+        <id property="id" column="id" />
+        <result property="studentId" column="student_id" />
+        <result property="courseId" column="course_id" />
+        <result property="createTime" column="create_time" />
+        <result property="state" column="state" />
+    </resultMap>
+
+    <resultMap id="StudentCourseDetailMap"
+        type="com.wacai.springboot_demo.model.StudentCourseDetail">
+        <id property="id" column="id" />
+        <result property="createTime" column="create_time" />
+        <result property="state" column="state" />
+        <association property="student" javaType="com.wacai.springboot_demo.model.Student">
+            <id property="id" column="student_id" />
+            <result property="name" column="student_name" />
+        </association>
+        <association property="teacher" javaType="com.wacai.springboot_demo.model.Teacher">
+            <id property="id" column="teacher_id" />
+            <result property="name" column="teacher_name" />
+        </association>
+        <association property="course" javaType="com.wacai.springboot_demo.model.Course">
+            <id property="id" column="course_id" />
+            <result property="name" column="course_name" />
+        </association>
+    </resultMap>
+
+    <select id="getByStudentIdAndCourseId" parameterType="com.wacai.springboot_demo.model.StudentCourse"
+        resultMap="StudentCourseBaseMap">
+        SELECT *
+        FROM student_course
+        WHERE student_id = #{studentId}
+        AND course_id = #{courseId}
+    </select>
+
+
+    <insert id="save" parameterType="com.wacai.springboot_demo.model.StudentCourse">
+        INSERT INTO student_course(student_id,course_id,create_time)
+        VALUES (#{studentId},#{courseId},#{createTime})
+    </insert>
+
+    <select id="find" parameterType="com.wacai.springboot_demo.model.StudentCourse"
+        resultMap="StudentCourseDetailMap">
+        SELECT
+        sc.id as id,
+        sc.create_time as create_time,
+        sc.state as state,
+        stu.id as student_id,
+        stu.name as student_name,
+        tea.id as teacher_id,
+        tea.name as teacher_name,
+        cou.id as course_id,
+        cou.name as course_name
+        FROM student_course sc
+        LEFT JOIN student stu on sc.student_id = stu.id
+        LEFT JOIN course cou on sc.course_id = cou.id
+        LEFT JOIN teacher tea on cou.teacher_id = tea.id
+        <where>
+            <if test="studentId != null">
+              sc.student_id = #{studentId}
+            </if>
+            <if test="courseId != null">
+              AND sc.course_id =  #{courseId}
+            </if>
+            AND sc.state = 1
+            AND cou.state = 1
+        </where>
+    </select>
+
+    <update id="deleteById" parameterType="int">
+        UPDATE student_course
+        SET state = -1
+        WHERE id = #{id}
+    </update>
+
+    <update id="recover" parameterType="int">
+        UPDATE student_course
+        SET state = 1
+        WHERE id = #{id}
+    </update>
+
+    <update id="deleteByCourseId" parameterType="int">
+        UPDATE student_course
+        SET state = -1
+        WHERE course_id = #{courseId}
+    </update>
+
+</mapper>
