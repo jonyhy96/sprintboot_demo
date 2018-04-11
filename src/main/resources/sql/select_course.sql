@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `select_course` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `select_course`;
 /*
 Navicat MySQL Data Transfer
 
